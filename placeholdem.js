@@ -1,62 +1,63 @@
 ( function() {
 	"use strict";
 
-	function on( elem, eventType, handler ) {
-		if( elem.addEventListener ) {
-			elem.addEventListener( eventType, handler );
-		} else {
-			elem.attachEvent( 'on' + eventType, handler )
-		}
-	}
+	window.requestAnimFrame=function(){return window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||function(a){window.setTimeout(a,1E3/60)}}();
 
-	function reduceInputLength( elem ) {
-		var str = elem.value;
-		if( str.length > 0 ){
-			str = str.slice( 0, -1 );
-			elem.value = str;
-			setTimeout( function() {
-				reduceInputLength( elem );
-			}, 20 );
-		}
-	}
+	function Placeholdem( elem ) {
+		var $ = this;
+		$.placeholder = elem.getAttribute( 'placeholder' );
 
-	function increaseInputLength( elem, target ) {
-		var str = elem.value;
-		if( str.length < target.length ) {
-		str += target[ str.length ];
-			elem.value = str;
-			setTimeout( function() {
-			increaseInputLength( elem, target );
-			}, 20 );
+		$.init = function() {
+			elem.removeAttribute( 'placeholder' );
+
+			if( !elem.value ) {
+				elem.value = $.placeholder;
+			}
+
+			$.on( elem, 'focus', function() {
+				if( elem.value === $.placeholder ) {
+					$.deletePlaceholder();
+				}
+			});
+
+			$.on( elem, 'blur', function() {
+				if( elem.value === '' ) {
+					$.restorePlaceholder();
+				}
+			});
+		};
+
+		$.on = function( elem, eventType, handler ) {
+			if( elem.addEventListener ) {
+				elem.addEventListener( eventType, handler );
+			} else {
+				elem.attachEvent( 'on' + eventType, handler )
+			}
+		};
+
+		$.deletePlaceholder = function() {
+			if( elem.value.length > 0 ){
+				elem.value = elem.value.slice( 0, -1 );
+				requestAnimationFrame( $.deletePlaceholder );
+			}
 		}
+
+		$.restorePlaceholder = function() {
+			var str = elem.value;
+			if( str.length < $.placeholder.length ) {
+				elem.value += $.placeholder[ str.length ];
+				requestAnimationFrame( $.restorePlaceholder );
+			}
+		}
+
+		$.init();
 	}
 
 	var elems = document.querySelectorAll( '[placeholder]' ),
 		elemsLength = elems.length,
 		i;
-
 	for( i = 0; i < elemsLength; i++ ) {
-		var elem = elems[ i ],
-			placeholder = elem.getAttribute( 'placeholder' );
-
-		elem.setAttribute( 'data-placeholder', placeholder );
-		elem.removeAttribute( 'placeholder' );
-
-			if( !elem.value ) {
-				elem.value = placeholder;
-			}
-
-		on( elem, 'focus', function() {
-			if( this.value === this.getAttribute( 'data-placeholder' ) ) {
-				reduceInputLength( this );
-				} 
-		});
-
-		on( elem, 'blur', function() {
-			if( this.value === '' ) {
-				increaseInputLength( this, this.getAttribute( 'data-placeholder' ) );
-			}
-		});
+		new Placeholdem( elems[ i ] );
 	}
 
 })();
