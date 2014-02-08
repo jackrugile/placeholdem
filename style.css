@@ -1,0 +1,75 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{ margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent}body{ line-height:1}article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{ display:block}nav ul{ list-style:none}blockquote,q{ quotes:none}blockquote:before,blockquote:after,q:before,q:after{ content:''; content:none}a{ margin:0; padding:0; border:0; font-size:100%; vertical-align:baseline; background:transparent}ins{ background-color:#ff9; color:#000; text-decoration:none}mark{ background-color:#ff9; color:#000; font-style:italic; font-weight:bold}del{ text-decoration:line-through}abbr[title],dfn[title]{ border-bottom:1px dotted #000; cursor:help}table{ border-collapse:collapse; border-spacing:0}hr{ display:block; height:1px; border:0;  border-top:1px solid #ccc; margin:1em 0; padding:0}input,select{ vertical-align:middle}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	background: #fff;
+	color: #333;
+	font: 400 100%/1.5 'Open Sans', sans-serif;
+}
+
+form {
+	margin: 0 auto;
+	max-width: 30em;
+	padding-top: 3em;
+}
+
+h1 {
+	font-size: 2.25em;
+	font-weight: 600;
+	letter-spacing: -0.05em;
+	line-height: 1;
+	margin-bottom: 0.2em;
+}
+
+h2 {
+	color: #999;
+	font-size: 1.1em;
+	font-weight: 400;
+	line-height: 1;
+	margin-bottom: 1.5em;
+}
+
+input {
+	background: #fff;
+	border: 2px solid #ddd;
+	color: #999;
+	display: block;
+	font: 400 1.1em/1 'Open Sans', sans-serif;
+	margin: 0 0 0.5em;
+	padding: 1em 1.25em;
+	position: relative;
+	-webkit-transition: all 300ms;
+	-moz-transition: all 300ms;
+	-ms-transition: all 300ms;
+	-o-transition: all 300ms;
+	transition: all 300ms;
+	width: 100%;
+}
+
+input:before {
+	background: blue;
+	border-top: 5px solid #f00;
+	border-right: 5px solid #f00;
+	border-bottom: 5px solid transparent;
+	border-left: 5px solid transparent;
+	content: '';
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 10px;
+	height: 10px;
+}
+
+input:focus {
+	border-color: #333;
+	color: #333;
+	outline: none;
+}
