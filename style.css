@@ -6,18 +6,24 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	
 }
 
 body {
 	background: #fff;
 	color: #333;
 	font: 400 100%/1.5 'Open Sans', sans-serif;
+	-webkit-transition: font-size 300ms;
+	-moz-transition: font-size 300ms;
+	-ms-transition: font-size 300ms;
+	-o-transition: font-size 300ms;
+	transition: font-size 300ms;
 }
 
 form {
 	margin: 0 auto;
-	max-width: 30em;
-	padding-top: 3em;
+	max-width: 36em;
+	padding: 3em;
 }
 
 h1 {
@@ -29,11 +35,16 @@ h1 {
 }
 
 h2 {
-	color: #999;
+	color: #333;
 	font-size: 1.1em;
 	font-weight: 400;
 	line-height: 1;
 	margin-bottom: 1.5em;
+}
+
+label {
+	display: block;
+	position: relative;
 }
 
 input {
@@ -44,32 +55,43 @@ input {
 	font: 400 1.1em/1 'Open Sans', sans-serif;
 	margin: 0 0 0.5em;
 	padding: 1em 1.25em;
-	position: relative;
-	-webkit-transition: all 300ms;
-	-moz-transition: all 300ms;
-	-ms-transition: all 300ms;
-	-o-transition: all 300ms;
-	transition: all 300ms;
 	width: 100%;
-}
-
-input:before {
-	background: blue;
-	border-top: 5px solid #f00;
-	border-right: 5px solid #f00;
-	border-bottom: 5px solid transparent;
-	border-left: 5px solid transparent;
-	content: '';
-	display: block;
-	position: absolute;
-	right: 0;
-	top: 0;
-	width: 10px;
-	height: 10px;
+	-webkit-transition: border-color 300ms, color 300ms;
+	-moz-transition: border-color 300ms, color 300ms;
+	-ms-transition: border-color 300ms, color 300ms;
+	-o-transition: border-color 300ms, color 300ms;
+	transition: border-color 300ms, color 300ms;
 }
 
 input:focus {
 	border-color: #333;
 	color: #333;
 	outline: none;
+}
+
+.arrow {
+	border-top: 10px solid #ddd;
+	border-right: 10px solid #ddd;
+	border-bottom: 10px solid transparent;
+	border-left: 10px solid transparent;
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+	-webkit-transition: border-color 300ms;
+	-moz-transition: border-color 300ms;
+	-ms-transition: border-color 300ms;
+	-o-transition: border-color 300ms;
+	transition: border-color 300ms;
+}
+
+input:focus + .arrow {
+	border-top-color: #333;
+	border-right-color: #333;
+}
+
+@media (max-width: 26em) {
+	body {
+		font-size: 80%;
+	}
 }
