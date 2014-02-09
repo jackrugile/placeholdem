@@ -47,6 +47,7 @@ label {
 	position: relative;
 }
 
+textarea,
 input {
 	background: #fff;
 	border: 2px solid #ddd;
@@ -63,7 +64,14 @@ input {
 	transition: border-color 300ms, color 300ms;
 }
 
-input:focus {
+textarea {
+	height: 9em;
+	line-height: 1.5;
+	resize: vertical;
+}
+
+input:focus,
+textarea:focus {
 	border-color: #333;
 	color: #333;
 	outline: none;
@@ -85,7 +93,8 @@ input:focus {
 	transition: border-color 300ms;
 }
 
-input:focus + .arrow {
+input:focus + .arrow,
+textarea:focus + .arrow {
 	border-top-color: #333;
 	border-right-color: #333;
 }
