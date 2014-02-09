@@ -65,8 +65,9 @@ input {
 }
 
 textarea {
-	height: 9em;
+	min-height: 9.5em;
 	line-height: 1.5;
+	overflow: auto;
 	resize: vertical;
 }
 
@@ -78,10 +79,10 @@ textarea:focus {
 }
 
 .arrow {
-	border-top: 10px solid #ddd;
-	border-right: 10px solid #ddd;
-	border-bottom: 10px solid transparent;
-	border-left: 10px solid transparent;
+	border-top: 9px solid #ddd;
+	border-right: 9px solid #ddd;
+	border-bottom: 9px inset transparent;
+	border-left: 9px inset transparent;
 	display: block;
 	position: absolute;
 	right: 0;

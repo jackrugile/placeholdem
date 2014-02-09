@@ -33,11 +33,11 @@ function Placeholdem( elems ) {
 		var PE = this;
 
 		PE.init = function() {
-			PE.rAF = null;
-			PE.inFlux = false;
 			PE.elem = elem;
 			PE.placeholder = PE.elem.getAttribute( 'placeholder' );
 			PE.elem.removeAttribute( 'placeholder' );
+			PE.rAF = null;
+			PE.animating = 0;
 
 			if( !PE.elem.value ) {
 				PE.elem.value = PE.placeholder;
@@ -65,24 +65,24 @@ function Placeholdem( elems ) {
 		};
 
 		PE.onFocus = function() {
-			if( PE.elem.value === PE.placeholder || PE.inFlux ) {
-				PE.inFlux = true;
+			if( PE.elem.value === PE.placeholder || PE.animating ) {
+				PE.animating = 1;
 				window.cancelAnimationFrame( PE.rAF );
 				PE.deletePlaceholder();
 			}
 		};
 
 		PE.onBlur = function() {
-			if( PE.elem.value === '' || PE.inFlux ) {
-				PE.inFlux = true;
+			if( PE.elem.value === '' || PE.animating ) {
+				PE.animating = 1;
 				window.cancelAnimationFrame( PE.rAF );
 				PE.restorePlaceholder();
 			}
 		};
 
 		PE.onKeydown = function() {
-			if( PE.inFlux ) {
-				PE.inFlux = false;
+			if( PE.animating ) {
+				PE.animating = 0;
 				window.cancelAnimationFrame( PE.rAF );
 				PE.elem.value = '';
 			}
@@ -93,7 +93,7 @@ function Placeholdem( elems ) {
 				PE.elem.value = PE.elem.value.slice( 0, -1 );
 				PE.rAF = window.requestAnimationFrame( PE.deletePlaceholder );
 			} else {
-				PE.inFlux = false;
+				PE.animating = 0;
 			}
 		};
 
@@ -102,7 +102,7 @@ function Placeholdem( elems ) {
 				PE.elem.value += PE.placeholder[ PE.elem.value.length ];
 				PE.rAF = window.requestAnimationFrame( PE.restorePlaceholder );
 			} else {
-				PE.inFlux = false;
+				PE.animating = 0;
 			}
 		};
 
