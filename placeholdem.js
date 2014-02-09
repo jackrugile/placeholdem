@@ -3,7 +3,7 @@ function Placeholdem( elems ) {
 
 	(function(){var lastTime=0;var vendors=['ms','moz','webkit','o'];for(var x=0;x<vendors.length&&!window.requestAnimationFrame;++x){window.requestAnimationFrame=window[vendors[x]+'RequestAnimationFrame'];window.cancelAnimationFrame=window[vendors[x]+'CancelAnimationFrame']||window[vendors[x]+'CancelRequestAnimationFrame'];}if(!window.requestAnimationFrame)window.requestAnimationFrame=function(callback,element){var currTime=new Date().getTime();var timeToCall=Math.max(0,16-(currTime-lastTime));var id=window.setTimeout(function(){callback(currTime+timeToCall);},timeToCall);lastTime=currTime+timeToCall;return id;};if(!window.cancelAnimationFrame)window.cancelAnimationFrame=function(id){clearTimeout(id);};}());
 
-	var P = this
+	var P = this;
 
 	P.init = function() {
 		P.elems = [];
@@ -45,13 +45,14 @@ function Placeholdem( elems ) {
 
 			PE.on( PE.elem, 'focus', PE.onFocus );
 			PE.on( PE.elem, 'blur', PE.onBlur);
+			PE.on( PE.elem, 'keydown', PE.onKeydown);
 		};
 
 		PE.on = function( elem, eventType, handler ) {
 			if( elem.addEventListener ) {
 				elem.addEventListener( eventType, handler );
 			} else {
-				elem.attachEvent( 'on' + eventType, handler )
+				elem.attachEvent( 'on' + eventType, handler );
 			}
 		};
 
@@ -59,14 +60,14 @@ function Placeholdem( elems ) {
 			if( elem.removeEventListener ) {
 				elem.removeEventListener( eventType, handler );
 			} else {
-				elem.detachEvent( 'on' + eventType, handler )
+				elem.detachEvent( 'on' + eventType, handler );
 			}
 		};
 
 		PE.onFocus = function() {
-			if( PE.elem.value === PE.placeholder || PE.inFlux  ) {
+			if( PE.elem.value === PE.placeholder || PE.inFlux ) {
 				PE.inFlux = true;
-				cancelAnimationFrame( PE.rAF );
+				window.cancelAnimationFrame( PE.rAF );
 				PE.deletePlaceholder();
 			}
 		};
@@ -74,25 +75,32 @@ function Placeholdem( elems ) {
 		PE.onBlur = function() {
 			if( PE.elem.value === '' || PE.inFlux ) {
 				PE.inFlux = true;
-				cancelAnimationFrame( PE.rAF );
+				window.cancelAnimationFrame( PE.rAF );
 				PE.restorePlaceholder();
+			}
+		};
+
+		PE.onKeydown = function() {
+			if( PE.inFlux ) {
+				PE.inFlux = false;
+				window.cancelAnimationFrame( PE.rAF );
+				PE.elem.value = '';
 			}
 		};
 
 		PE.deletePlaceholder = function() {
 			if( PE.elem.value.length > 0 ) {
 				PE.elem.value = PE.elem.value.slice( 0, -1 );
-				PE.rAF = requestAnimationFrame( PE.deletePlaceholder );
+				PE.rAF = window.requestAnimationFrame( PE.deletePlaceholder );
 			} else {
 				PE.inFlux = false;
 			}
 		};
 
 		PE.restorePlaceholder = function() {
-			var str = PE.elem.value;
-			if( str.length < PE.placeholder.length ) {
-				PE.elem.value += PE.placeholder[ str.length ];
-				PE.rAF = requestAnimationFrame( PE.restorePlaceholder );
+			if( PE.elem.value.length < PE.placeholder.length ) {
+				PE.elem.value += PE.placeholder[ PE.elem.value.length ];
+				PE.rAF = window.requestAnimationFrame( PE.restorePlaceholder );
 			} else {
 				PE.inFlux = false;
 			}
