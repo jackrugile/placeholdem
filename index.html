@@ -5,30 +5,34 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Placeholdem // Placeholder Caret Animation</title>
-		<link href="style.css" rel="stylesheet" />
-		<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+		<link href="assets/css/style.min.css" rel="stylesheet" />
+		<link href="assets/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 	</head>
 	<body>
-		<form>
+		<div class="container">
 			<h1>Placeholdem</h1>
 			<h2>Placeholder Caret Animation</h2>
-			<label>
-				<input name="fullname" placeholder="Full Name" />
-				<div class="arrow"></div>
-			</label>
-			<label>
-				<input name="email" placeholder="Email Address" />
-				<div class="arrow"></div>
-			</label>
-			<label>
-				<textarea name="message" placeholder="How can we help you?"></textarea>
-				<div class="arrow"></div>
-			</label>
-		</form>
-		<script src="placeholdem.js"></script>
+			<form>
+				
+				<label>
+					<input name="fullname" placeholder="Full Name" />
+					<div class="arrow"></div>
+				</label>
+				<label>
+					<input name="email" placeholder="Email Address" />
+					<div class="arrow"></div>
+				</label>
+				<label>
+					<textarea name="message" placeholder="How can we help you?"></textarea>
+					<div class="arrow"></div>
+				</label>
+			</form>
+			<hr />
+			<p>Placeholdem animates input and textarea carets on placeholder text. The placeholder value will incrementally delete on focus, and incrementally restore on blur. That is, of course, if no value was entered by the user.</p>
+		</div>
+		<script src="placeholdem.min.js"></script>
 		<script>
 			var placeholdem = new Placeholdem( document.querySelectorAll( '[placeholder]' ) );
-			//placeholdem.destroy();
 		</script>
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

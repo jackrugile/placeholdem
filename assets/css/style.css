@@ -1,0 +1,235 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
+/* line 29, style.scss */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 29, style.scss */
+body {
+  line-height: 1;
+}
+
+/* line 29, style.scss */
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 29, style.scss */
+nav ul {
+  list-style: none;
+}
+
+/* line 29, style.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 29, style.scss */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 29, style.scss */
+a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 29, style.scss */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* line 29, style.scss */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* line 29, style.scss */
+del {
+  text-decoration: line-through;
+}
+
+/* line 29, style.scss */
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+
+/* line 29, style.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 29, style.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* line 29, style.scss */
+input, select {
+  vertical-align: middle;
+}
+
+/* line 39, style.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 43, style.scss */
+body {
+  color: #333333;
+  font: 400 120% / 1.5 "Open Sans", sans-serif;
+  -webkit-transition: font-size 300ms;
+  transition: font-size 300ms;
+}
+
+/* line 49, style.scss */
+.container {
+  margin: 0 auto;
+  max-width: 40em;
+  padding: 3em;
+}
+
+/* line 55, style.scss */
+hr {
+  background: #333333;
+  border: none;
+  height: 3px;
+  margin-bottom: 3em;
+}
+
+/* line 62, style.scss */
+::-moz-selection {
+  background: #333333 !important;
+  color: #fff !important;
+  text-shadow: none !important;
+}
+
+/* line 68, style.scss */
+::selection {
+  background: #333333 !important;
+  color: #fff !important;
+  text-shadow: none !important;
+}
+
+@media (max-width: 50em) {
+  /* line 75, style.scss */
+  body {
+    font-size: 100%;
+  }
+}
+@media (max-width: 30em) {
+  /* line 81, style.scss */
+  body {
+    font-size: 80%;
+  }
+
+  /* line 85, style.scss */
+  .container {
+    padding: 1.5em;
+  }
+}
+/* line 98, style.scss */
+h1 {
+  font-size: 3em;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  margin-bottom: 0.1em;
+}
+
+/* line 106, style.scss */
+h2 {
+  color: #333333;
+  font-size: 1.3em;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 1.5em;
+}
+
+/* line 122, style.scss */
+form {
+  margin-bottom: 3em;
+}
+
+/* line 126, style.scss */
+label {
+  display: block;
+  position: relative;
+}
+
+/* line 132, style.scss */
+textarea,
+input {
+  border: 2px solid #dddddd;
+  color: #999999;
+  display: block;
+  font: 400 1.1em/1 "Open Sans", sans-serif;
+  margin: 0 0 0.5em;
+  padding: 1em 1.25em;
+  width: 100%;
+  -webkit-transition: border-color 300ms, color 300ms;
+  transition: border-color 300ms, color 300ms;
+}
+/* line 144, style.scss */
+textarea:focus,
+input:focus {
+  border-color: #333333;
+  color: #333333;
+  outline: none;
+}
+
+/* line 151, style.scss */
+textarea {
+  margin: 0;
+  min-height: 7.5em;
+  line-height: 1.5;
+  overflow: auto;
+  resize: vertical;
+}
+
+/* line 159, style.scss */
+.arrow {
+  border-top: 9px solid #dddddd;
+  border-right: 9px solid #dddddd;
+  border-bottom: 9px inset transparent;
+  border-left: 9px inset transparent;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: border-color 300ms;
+  transition: border-color 300ms;
+}
+
+/* line 172, style.scss */
+input:focus + .arrow,
+textarea:focus + .arrow {
+  border-top-color: #333333;
+  border-right-color: #333333;
+}
