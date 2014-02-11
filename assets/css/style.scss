@@ -243,35 +243,26 @@ Buttons
 
 .button {
 	background: $color-dark;
-	border-right: 1px solid #fff;
-	border-bottom: 1px solid #fff;
+	border: none;
 	color: #fff;
 	display: block;
 	float: left;
 	font-size: 1em;
 	font-weight: 600;
+	margin: 0 1px 1px 0;
 	padding: #{$baseline}em;
-	transition: background $transition-duration;
+	transition: background $transition-duration
 	width: 50%;
 }
 
 .button:last-child {
-	border: none;
+	margin: 0;
 }
 
 .button:hover,
 .button:focus {
 	background: $color-mid;
 	color: #fff;
-}
-
-@media (max-width: 30em) {
-	.button {
-		border: none;
-		float: none;
-		margin-bottom: 1px;
-		width: auto;
-	}
 }
 
 /*
@@ -311,24 +302,4 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar-thumb:hover {
 	background: $color-mid;
-}
-
-/*
-//////////////////////////////////////////////////
-Miscellaneous
-\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-*/
-
-.clearfix:before,
-.clearfix:after {
-	content: '';
-	display: table;
-}
-
-.clearfix:after {
-	clear: both;
-}
-
-.clearfix {
-	zoom: 1;
 }

@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Placeholdem // Placeholder Caret Animation</title>
+		<meta name="description" content="Placeholdem is a JavaScript plugin that animates placeholder carets on inputs and textareas. The placeholder value will incrementally delete on focus, and restore on blur." />
 		<link href="assets/css/style.min.css" rel="stylesheet" />
 		<link href="assets/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 	</head>
@@ -12,13 +13,15 @@
 		<div class="container">
 			<h1 class="fade">Placeholdem</h1>
 			<h2 class="fade">Placeholder Caret Animation</h2>
+			<p class="fade">Placeholdem is a JavaScript plugin that animates placeholder carets on inputs and textareas. The placeholder value will incrementally delete on focus, and restore on blur.</p>
+			<h3 class="fade">Try It</h3>
 			<form>
 				<label class="fade">
 					<input name="field1" placeholder="Give it a try on these fields" />
 					<div class="arrow"></div>
 				</label>
 				<label class="fade">
-					<input name="field2" placeholder="Gets triggered on focus and blur" />
+					<input name="field2" placeholder="Triggered on focus and blur" />
 					<div class="arrow"></div>
 				</label>
 				<label class="fade">
@@ -26,8 +29,25 @@
 					<div class="arrow"></div>
 				</label>
 			</form>
-			<hr class="fade" />
-			<p  class="fade">Placeholdem animates input and textarea carets on placeholder text. The placeholder value will incrementally delete on focus, and incrementally restore on blur. That is, of course, if no value was entered by the user.</p>
+			<h3 class="fade">Get It</h3>
+			<div class="buttons fade clearfix">
+				<a href="placeholdem.min.js" class="button">placeholdem.min.js</a>
+				<a href="https://github.com/jackrugile/placeholdem" class="button">GitHub Repository</a>
+			</div>
+			<h3 class="fade">Use It</h3>
+			<pre class="fade"><code><span>// Input or Textarea</span>
+&lt;input name="fieldname" placeholder="Placeholder Value" /&gt;
+
+<span>// Initialize</span>
+var fields = document.querySelectorAll( '[placeholder]' ),
+    placeholdem = new Placeholdem( fields );
+
+<span>// Destroy</span>
+placeholdem.destroy();
+</code></pre>		
+		<footer class="fade">
+			<p>By <a href="http://jackrugile.com" title="Jack Rugile">Jack Rugile</a></p>
+		</footer>
 		</div>
 		<script src="placeholdem.min.js"></script>
 		<script>

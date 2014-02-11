@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
-/* line 29, style.scss */
+/* line 27, style.scss */
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -10,33 +10,33 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
   background: transparent;
 }
 
-/* line 29, style.scss */
+/* line 27, style.scss */
 body {
   line-height: 1;
 }
 
-/* line 29, style.scss */
+/* line 27, style.scss */
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
 
-/* line 29, style.scss */
+/* line 27, style.scss */
 nav ul {
   list-style: none;
 }
 
-/* line 29, style.scss */
+/* line 27, style.scss */
 blockquote, q {
   quotes: none;
 }
 
-/* line 29, style.scss */
+/* line 27, style.scss */
 blockquote:before, blockquote:after, q:before, q:after {
   content: '';
   content: none;
 }
 
-/* line 29, style.scss */
+/* line 27, style.scss */
 a {
   margin: 0;
   padding: 0;
@@ -46,14 +46,14 @@ a {
   background: transparent;
 }
 
-/* line 29, style.scss */
+/* line 27, style.scss */
 ins {
   background-color: #ff9;
   color: #000;
   text-decoration: none;
 }
 
-/* line 29, style.scss */
+/* line 27, style.scss */
 mark {
   background-color: #ff9;
   color: #000;
@@ -61,24 +61,24 @@ mark {
   font-weight: bold;
 }
 
-/* line 29, style.scss */
+/* line 27, style.scss */
 del {
   text-decoration: line-through;
 }
 
-/* line 29, style.scss */
+/* line 27, style.scss */
 abbr[title], dfn[title] {
   border-bottom: 1px dotted #000;
   cursor: help;
 }
 
-/* line 29, style.scss */
+/* line 27, style.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 29, style.scss */
+/* line 27, style.scss */
 hr {
   display: block;
   height: 1px;
@@ -88,19 +88,19 @@ hr {
   padding: 0;
 }
 
-/* line 29, style.scss */
+/* line 27, style.scss */
 input, select {
   vertical-align: middle;
 }
 
-/* line 39, style.scss */
+/* line 35, style.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 43, style.scss */
+/* line 39, style.scss */
 body {
   color: #333333;
   font: 400 120% / 1.5 "Open Sans", sans-serif;
@@ -108,14 +108,14 @@ body {
   transition: font-size 300ms;
 }
 
-/* line 49, style.scss */
+/* line 45, style.scss */
 .container {
   margin: 0 auto;
   max-width: 40em;
   padding: 3em;
 }
 
-/* line 55, style.scss */
+/* line 51, style.scss */
 hr {
   background: #333333;
   border: none;
@@ -123,21 +123,21 @@ hr {
   margin-bottom: 3em;
 }
 
-/* line 62, style.scss */
+/* line 58, style.scss */
 ::-moz-selection {
   background: #333333 !important;
   color: #fff !important;
   text-shadow: none !important;
 }
 
-/* line 68, style.scss */
+/* line 64, style.scss */
 ::selection {
   background: #333333 !important;
   color: #fff !important;
   text-shadow: none !important;
 }
 
-/* line 74, style.scss */
+/* line 70, style.scss */
 .fade {
   opacity: 0;
   position: relative;
@@ -146,30 +146,30 @@ hr {
   transition: opacity 600ms, top 600ms;
 }
 
-/* line 84, style.scss */
+/* line 80, style.scss */
 .fade-load {
   opacity: 1;
   top: 0;
 }
 
 @media (max-width: 50em) {
-  /* line 90, style.scss */
+  /* line 86, style.scss */
   body {
     font-size: 100%;
   }
 }
 @media (max-width: 30em) {
-  /* line 96, style.scss */
+  /* line 92, style.scss */
   body {
-    font-size: 80%;
+    font-size: 90%;
   }
 
-  /* line 100, style.scss */
+  /* line 96, style.scss */
   .container {
     padding: 1.5em;
   }
 }
-/* line 113, style.scss */
+/* line 107, style.scss */
 h1 {
   font-size: 3em;
   font-weight: 600;
@@ -178,27 +178,77 @@ h1 {
   margin-bottom: 0.1em;
 }
 
-/* line 121, style.scss */
+/* line 115, style.scss */
 h2 {
   color: #333333;
   font-size: 1.3em;
   font-weight: 400;
   line-height: 1;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.125em;
 }
 
-/* line 137, style.scss */
+/* line 123, style.scss */
+h3 {
+  font-size: 1.3em;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 0.75em;
+}
+
+/* line 130, style.scss */
+p {
+  font-size: 0.9em;
+  margin-bottom: 1.875em;
+}
+
+/* line 135, style.scss */
+pre {
+  display: block;
+  margin-bottom: 2.25em;
+}
+
+/* line 140, style.scss */
+code {
+  background: #eee;
+  color: #333333;
+  display: block;
+  font-size: 0.9em;
+  overflow: auto;
+  padding: 1.5em 2.25em;
+}
+
+/* line 149, style.scss */
+code span {
+  color: #999999;
+}
+
+/* line 153, style.scss */
+a {
+  border-bottom: 2px solid #dddddd;
+  color: #333333;
+  text-decoration: none;
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+}
+
+/* line 161, style.scss */
+a:hover,
+a:focus {
+  color: #999999;
+}
+
+/* line 171, style.scss */
 form {
-  margin-bottom: 3em;
+  margin-bottom: 2.25em;
 }
 
-/* line 141, style.scss */
+/* line 175, style.scss */
 label {
   display: block;
   position: relative;
 }
 
-/* line 147, style.scss */
+/* line 181, style.scss */
 textarea,
 input {
   border: 2px solid #dddddd;
@@ -213,7 +263,7 @@ input {
   transition: border-color 300ms, color 300ms;
   -webkit-appearance: none;
 }
-/* line 161, style.scss */
+/* line 195, style.scss */
 textarea:focus,
 input:focus {
   border-color: #333333;
@@ -221,7 +271,7 @@ input:focus {
   outline: none;
 }
 
-/* line 168, style.scss */
+/* line 202, style.scss */
 textarea {
   margin: 0;
   min-height: 7.5em;
@@ -230,7 +280,7 @@ textarea {
   resize: vertical;
 }
 
-/* line 176, style.scss */
+/* line 210, style.scss */
 .arrow {
   border-top: 9px solid #dddddd;
   border-right: 9px solid #dddddd;
@@ -244,7 +294,7 @@ textarea {
   transition: border-color 300ms;
 }
 
-/* line 189, style.scss */
+/* line 223, style.scss */
 input:focus + .arrow,
 textarea:focus + .arrow {
   border-top-color: #333333;
@@ -252,9 +302,101 @@ textarea:focus + .arrow {
 }
 
 @media (max-width: 30em) {
-  /* line 196, style.scss */
+  /* line 230, style.scss */
   textarea,
   input {
     font-size: 1.3em;
   }
+}
+/* line 240, style.scss */
+.buttons {
+  margin-bottom: 2.25em;
+}
+
+/* line 244, style.scss */
+.button {
+  background: #333333;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  display: block;
+  float: left;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 1.5em;
+  -webkit-transition: background 300ms;
+  transition: background 300ms;
+  width: 50%;
+}
+
+/* line 258, style.scss */
+.button:last-child {
+  border: none;
+}
+
+/* line 263, style.scss */
+.button:hover,
+.button:focus {
+  background: #999999;
+  color: #fff;
+}
+
+@media (max-width: 30em) {
+  /* line 269, style.scss */
+  .button {
+    border: none;
+    float: none;
+    margin-bottom: 1px;
+    width: auto;
+  }
+}
+/* line 283, style.scss */
+footer {
+  border-top: 2px solid #dddddd;
+  padding-top: 1.5em;
+}
+
+/* line 288, style.scss */
+footer p {
+  font-size: 0.8em;
+  margin-bottom: 0;
+}
+
+/* line 299, style.scss */
+body::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* line 303, style.scss */
+body::-webkit-scrollbar-track {
+  background: #dddddd;
+}
+
+/* line 307, style.scss */
+body::-webkit-scrollbar-thumb {
+  background: #333333;
+  -webkit-transition: background 300ms;
+  transition: background 300ms;
+}
+
+/* line 312, style.scss */
+body::-webkit-scrollbar-thumb:hover {
+  background: #999999;
+}
+
+/* line 323, style.scss */
+.clearfix:before,
+.clearfix:after {
+  content: '';
+  display: table;
+}
+
+/* line 328, style.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 332, style.scss */
+.clearfix {
+  zoom: 1;
 }
