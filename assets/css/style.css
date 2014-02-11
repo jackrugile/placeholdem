@@ -187,9 +187,10 @@ label {
 textarea,
 input {
   border: 2px solid #dddddd;
+  border-radius: none;
   color: #999999;
   display: block;
-  font: 400 1.2em/1 "Open Sans", sans-serif;
+  font: 400 1em/1 "Open Sans", sans-serif;
   margin: 0 0 0.5em;
   padding: 1em 1.25em;
   width: 100%;
@@ -197,7 +198,7 @@ input {
   transition: border-color 300ms, color 300ms;
   -webkit-appearance: none;
 }
-/* line 145, style.scss */
+/* line 146, style.scss */
 textarea:focus,
 input:focus {
   border-color: #333333;
@@ -205,7 +206,7 @@ input:focus {
   outline: none;
 }
 
-/* line 152, style.scss */
+/* line 153, style.scss */
 textarea {
   margin: 0;
   min-height: 7.5em;
@@ -214,7 +215,7 @@ textarea {
   resize: vertical;
 }
 
-/* line 160, style.scss */
+/* line 161, style.scss */
 .arrow {
   border-top: 9px solid #dddddd;
   border-right: 9px solid #dddddd;
@@ -228,9 +229,17 @@ textarea {
   transition: border-color 300ms;
 }
 
-/* line 173, style.scss */
+/* line 174, style.scss */
 input:focus + .arrow,
 textarea:focus + .arrow {
   border-top-color: #333333;
   border-right-color: #333333;
+}
+
+@media (max-width: 30em) {
+  /* line 181, style.scss */
+  textarea,
+  input {
+    font-size: 1.3em;
+  }
 }

@@ -131,9 +131,10 @@ label {
 textarea,
 input {
 	border: 2px solid $color-light;
+	border-radius: none;
 	color: $color-mid;
 	display: block;
-	font: 400 1.2em/1 $font-stack;
+	font: 400 1em/1 $font-stack;
 	margin: 0 0 0.5em;
 	padding: 1em 1.25em;
 	width: 100%;
@@ -173,4 +174,11 @@ input:focus + .arrow,
 textarea:focus + .arrow {
 	border-top-color: $color-dark;
 	border-right-color: $color-dark;
+}
+
+@media (max-width: 30em) {
+	textarea,
+	input {
+		font-size: 1.3em;
+	}
 }
