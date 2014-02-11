@@ -131,7 +131,7 @@ label {
 textarea,
 input {
 	border: 2px solid $color-light;
-	border-radius: none;
+	border-radius: 0;
 	color: $color-mid;
 	display: block;
 	font: 400 1em/1 $font-stack;

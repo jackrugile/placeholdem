@@ -187,7 +187,7 @@ label {
 textarea,
 input {
   border: 2px solid #dddddd;
-  border-radius: none;
+  border-radius: 0;
   color: #999999;
   display: block;
   font: 400 1em/1 "Open Sans", sans-serif;
