@@ -189,14 +189,15 @@ input {
   border: 2px solid #dddddd;
   color: #999999;
   display: block;
-  font: 400 1.1em/1 "Open Sans", sans-serif;
+  font: 400 1.2em/1 "Open Sans", sans-serif;
   margin: 0 0 0.5em;
   padding: 1em 1.25em;
   width: 100%;
   -webkit-transition: border-color 300ms, color 300ms;
   transition: border-color 300ms, color 300ms;
+  -webkit-appearance: none;
 }
-/* line 144, style.scss */
+/* line 145, style.scss */
 textarea:focus,
 input:focus {
   border-color: #333333;
@@ -204,7 +205,7 @@ input:focus {
   outline: none;
 }
 
-/* line 151, style.scss */
+/* line 152, style.scss */
 textarea {
   margin: 0;
   min-height: 7.5em;
@@ -213,7 +214,7 @@ textarea {
   resize: vertical;
 }
 
-/* line 159, style.scss */
+/* line 160, style.scss */
 .arrow {
   border-top: 9px solid #dddddd;
   border-right: 9px solid #dddddd;
@@ -227,7 +228,7 @@ textarea {
   transition: border-color 300ms;
 }
 
-/* line 172, style.scss */
+/* line 173, style.scss */
 input:focus + .arrow,
 textarea:focus + .arrow {
   border-top-color: #333333;

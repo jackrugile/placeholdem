@@ -133,7 +133,7 @@ input {
 	border: 2px solid $color-light;
 	color: $color-mid;
 	display: block;
-	font: 400 1.1em/1 $font-stack;
+	font: 400 1.2em/1 $font-stack;
 	margin: 0 0 0.5em;
 	padding: 1em 1.25em;
 	width: 100%;
@@ -141,6 +141,7 @@ input {
 		border-color $transition-duration, 
 		color $transition-duration
 	;
+	-webkit-appearance: none;
 	&:focus {
 		border-color: $color-dark;
 		color: $color-dark;
