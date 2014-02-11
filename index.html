@@ -10,29 +10,42 @@
 	</head>
 	<body>
 		<div class="container">
-			<h1>Placeholdem</h1>
-			<h2>Placeholder Caret Animation</h2>
+			<h1 class="fade">Placeholdem</h1>
+			<h2 class="fade">Placeholder Caret Animation</h2>
 			<form>
-				
-				<label>
-					<input name="fullname" placeholder="Full Name" />
+				<label class="fade">
+					<input name="field1" placeholder="Give it a try on these fields" />
 					<div class="arrow"></div>
 				</label>
-				<label>
-					<input name="email" placeholder="Email Address" />
+				<label class="fade">
+					<input name="field2" placeholder="Gets triggered on focus and blur" />
 					<div class="arrow"></div>
 				</label>
-				<label>
-					<textarea name="message" placeholder="How can we help you?"></textarea>
+				<label class="fade">
+					<textarea name="field3" placeholder="2.45kb of JavaScript"></textarea>
 					<div class="arrow"></div>
 				</label>
 			</form>
-			<hr />
-			<p>Placeholdem animates input and textarea carets on placeholder text. The placeholder value will incrementally delete on focus, and incrementally restore on blur. That is, of course, if no value was entered by the user.</p>
+			<hr class="fade" />
+			<p  class="fade">Placeholdem animates input and textarea carets on placeholder text. The placeholder value will incrementally delete on focus, and incrementally restore on blur. That is, of course, if no value was entered by the user.</p>
 		</div>
 		<script src="placeholdem.min.js"></script>
 		<script>
-			var placeholdem = new Placeholdem( document.querySelectorAll( '[placeholder]' ) );
+			var placeholdem = new Placeholdem( document.querySelectorAll( '[placeholder]' ) ),
+				fadeElems = document.body.querySelectorAll( '.fade' ),
+				fadeElemsLength = fadeElems.length,
+				i = 0,
+				interval = 50;
+
+				function incFade() {
+					if( i < fadeElemsLength ) {
+						fadeElems[ i ].className += ' fade-load';
+						i++;
+						setTimeout( incFade, interval );
+					}
+				}
+
+				setTimeout( incFade, interval );
 		</script>
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

@@ -71,6 +71,21 @@ hr {
 	text-shadow: none !important;
 }
 
+.fade {
+	opacity: 0;
+	position: relative;
+	top: -10px;
+	transition: 
+		opacity $transition-duration * 2,
+		top $transition-duration * 2
+	;
+}
+
+.fade-load {
+	opacity: 1;
+	top: 0;
+}
+
 @media (max-width: 50em) {
 	body {
 		font-size: 100%;

@@ -137,24 +137,39 @@ hr {
   text-shadow: none !important;
 }
 
+/* line 74, style.scss */
+.fade {
+  opacity: 0;
+  position: relative;
+  top: -10px;
+  -webkit-transition: opacity 600ms, top 600ms;
+  transition: opacity 600ms, top 600ms;
+}
+
+/* line 84, style.scss */
+.fade-load {
+  opacity: 1;
+  top: 0;
+}
+
 @media (max-width: 50em) {
-  /* line 75, style.scss */
+  /* line 90, style.scss */
   body {
     font-size: 100%;
   }
 }
 @media (max-width: 30em) {
-  /* line 81, style.scss */
+  /* line 96, style.scss */
   body {
     font-size: 80%;
   }
 
-  /* line 85, style.scss */
+  /* line 100, style.scss */
   .container {
     padding: 1.5em;
   }
 }
-/* line 98, style.scss */
+/* line 113, style.scss */
 h1 {
   font-size: 3em;
   font-weight: 600;
@@ -163,7 +178,7 @@ h1 {
   margin-bottom: 0.1em;
 }
 
-/* line 106, style.scss */
+/* line 121, style.scss */
 h2 {
   color: #333333;
   font-size: 1.3em;
@@ -172,18 +187,18 @@ h2 {
   margin-bottom: 1.5em;
 }
 
-/* line 122, style.scss */
+/* line 137, style.scss */
 form {
   margin-bottom: 3em;
 }
 
-/* line 126, style.scss */
+/* line 141, style.scss */
 label {
   display: block;
   position: relative;
 }
 
-/* line 132, style.scss */
+/* line 147, style.scss */
 textarea,
 input {
   border: 2px solid #dddddd;
@@ -198,7 +213,7 @@ input {
   transition: border-color 300ms, color 300ms;
   -webkit-appearance: none;
 }
-/* line 146, style.scss */
+/* line 161, style.scss */
 textarea:focus,
 input:focus {
   border-color: #333333;
@@ -206,7 +221,7 @@ input:focus {
   outline: none;
 }
 
-/* line 153, style.scss */
+/* line 168, style.scss */
 textarea {
   margin: 0;
   min-height: 7.5em;
@@ -215,7 +230,7 @@ textarea {
   resize: vertical;
 }
 
-/* line 161, style.scss */
+/* line 176, style.scss */
 .arrow {
   border-top: 9px solid #dddddd;
   border-right: 9px solid #dddddd;
@@ -229,7 +244,7 @@ textarea {
   transition: border-color 300ms;
 }
 
-/* line 174, style.scss */
+/* line 189, style.scss */
 input:focus + .arrow,
 textarea:focus + .arrow {
   border-top-color: #333333;
@@ -237,7 +252,7 @@ textarea:focus + .arrow {
 }
 
 @media (max-width: 30em) {
-  /* line 181, style.scss */
+  /* line 196, style.scss */
   textarea,
   input {
     font-size: 1.3em;
