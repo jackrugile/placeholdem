@@ -194,28 +194,6 @@ p {
 }
 
 /* line 128, style.scss */
-pre {
-  display: block;
-  margin-bottom: 3em;
-}
-
-/* line 133, style.scss */
-code {
-  background: #eee;
-  color: #333333;
-  display: block;
-  font-size: 0.9em;
-  overflow: auto;
-  padding: 2.25em 2.25em;
-  -webkit-overflow-scrolling: touch;
-}
-
-/* line 143, style.scss */
-code span {
-  color: #999999;
-}
-
-/* line 147, style.scss */
 a {
   border-bottom: 1px solid #dddddd;
   color: #333333;
@@ -224,24 +202,24 @@ a {
   transition: color 300ms;
 }
 
-/* line 155, style.scss */
+/* line 136, style.scss */
 a:hover,
 a:focus {
   color: #999999;
 }
 
-/* line 165, style.scss */
+/* line 146, style.scss */
 form {
   margin-bottom: 2.25em;
 }
 
-/* line 169, style.scss */
+/* line 150, style.scss */
 label {
   display: block;
   position: relative;
 }
 
-/* line 175, style.scss */
+/* line 156, style.scss */
 textarea,
 input {
   border: 2px solid #dddddd;
@@ -256,7 +234,7 @@ input {
   transition: border-color 300ms, color 300ms;
   -webkit-appearance: none;
 }
-/* line 189, style.scss */
+/* line 170, style.scss */
 textarea:focus,
 input:focus {
   border-color: #333333;
@@ -264,7 +242,7 @@ input:focus {
   outline: none;
 }
 
-/* line 196, style.scss */
+/* line 177, style.scss */
 textarea {
   margin: 0;
   min-height: 7.5em;
@@ -273,7 +251,7 @@ textarea {
   resize: vertical;
 }
 
-/* line 204, style.scss */
+/* line 185, style.scss */
 .arrow {
   border-top: 9px solid #dddddd;
   border-right: 9px solid #dddddd;
@@ -287,7 +265,7 @@ textarea {
   transition: border-color 300ms;
 }
 
-/* line 217, style.scss */
+/* line 198, style.scss */
 input:focus + .arrow,
 textarea:focus + .arrow {
   border-top-color: #333333;
@@ -295,22 +273,20 @@ textarea:focus + .arrow {
 }
 
 @media (max-width: 30em) {
-  /* line 224, style.scss */
+  /* line 205, style.scss */
   textarea,
   input {
     font-size: 1.3em;
   }
 }
-/* line 234, style.scss */
+/* line 215, style.scss */
 .buttons {
   margin-bottom: 2.25em;
 }
 
-/* line 238, style.scss */
+/* line 219, style.scss */
 .button {
   background: #333333;
-  border-right: 1px solid #fff;
-  border-bottom: 1px solid #fff;
   color: #fff;
   display: block;
   float: left;
@@ -320,15 +296,15 @@ textarea:focus + .arrow {
   text-align: center;
   -webkit-transition: background 300ms;
   transition: background 300ms;
-  width: 50%;
+  width: 49%;
 }
 
-/* line 253, style.scss */
+/* line 232, style.scss */
 .button:last-child {
-  border: none;
+  float: right;
 }
 
-/* line 258, style.scss */
+/* line 237, style.scss */
 .button:hover,
 .button:focus {
   background: #999999;
@@ -336,59 +312,92 @@ textarea:focus + .arrow {
 }
 
 @media (max-width: 30em) {
-  /* line 264, style.scss */
-  .button {
+  /* line 244, style.scss */
+  .button,
+  .button:last-child {
     border: none;
     float: none;
-    margin-bottom: 1px;
+    margin-bottom: 0.75em;
     width: auto;
   }
 }
-/* line 278, style.scss */
+/* line 258, style.scss */
+.code-wrap {
+  margin-bottom: 3em;
+}
+
+/* line 262, style.scss */
+pre {
+  display: block;
+  margin-bottom: 1.125em;
+}
+
+/* line 267, style.scss */
+pre:last-child {
+  margin-bottom: 0;
+}
+
+/* line 271, style.scss */
+code {
+  background: #eee;
+  color: #333333;
+  display: block;
+  font-size: 0.9em;
+  overflow: auto;
+  padding: 1.875em 1.875em;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* line 281, style.scss */
+code span {
+  color: #999999;
+}
+
+/* line 291, style.scss */
 footer {
   border-top: 2px solid #dddddd;
   padding-top: 2.25em;
 }
 
-/* line 283, style.scss */
+/* line 296, style.scss */
 footer p {
   font-size: 0.8em;
   margin-bottom: 0;
 }
 
-/* line 294, style.scss */
+/* line 307, style.scss */
 body::-webkit-scrollbar {
   width: 15px;
 }
 
-/* line 298, style.scss */
+/* line 311, style.scss */
 body::-webkit-scrollbar-track {
   background: #dddddd;
 }
 
-/* line 302, style.scss */
+/* line 315, style.scss */
 body::-webkit-scrollbar-thumb {
   background: #333333;
 }
 
-/* line 306, style.scss */
+/* line 319, style.scss */
 body::-webkit-scrollbar-thumb:hover {
   background: #999999;
 }
 
-/* line 317, style.scss */
+/* line 330, style.scss */
 .clearfix:before,
 .clearfix:after {
   content: '';
   display: table;
 }
 
-/* line 322, style.scss */
+/* line 335, style.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 326, style.scss */
+/* line 339, style.scss */
 .clearfix {
   zoom: 1;
 }

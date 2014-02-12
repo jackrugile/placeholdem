@@ -31,21 +31,22 @@
 				<a href="https://github.com/jackrugile/placeholdem" class="button">GitHub Repository</a>
 			</div>
 			<h3 class="fade">Use It</h3>
-			<pre class="fade"><code><span>// Input or Textarea</span>
-&lt;input name="fieldname" placeholder="Placeholder Value" /&gt;
-
-<span>// Initialize</span>
-var fields = document.querySelectorAll( '[placeholder]' ),
-    placeholdem = new Placeholdem( fields );
+			<div class="code-wrap">
+				<pre class="fade"><code><span>&lt;!-- add placeholder to input or textarea --/&gt;</span>
+&lt;input name="fieldname" placeholder="Placeholder Value" /&gt;</code></pre>
+				<pre class="fade"><code><span>// run Placeholdem on all elements with placeholders</span>
+Placeholdem( document.querySelectorAll( '[placeholder]' ) );
 </code></pre>
+			</div>
 		<footer class="fade">
 			<p>By <a href="http://jackrugile.com" title="Jack Rugile">Jack Rugile</a></p>
 		</footer>
 		</div>
 		<script src="placeholdem.min.js"></script>
 		<script>
-			var placeholdem = new Placeholdem( document.querySelectorAll( '[placeholder]' ) ),
-				fadeElems = document.body.querySelectorAll( '.fade' ),
+			Placeholdem( document.querySelectorAll( '[placeholder]' ) );
+
+			var fadeElems = document.body.querySelectorAll( '.fade' ),
 				fadeElemsLength = fadeElems.length,
 				i = 0,
 				interval = 50;

@@ -1,5 +1,8 @@
 # Changelog
 
+#### v1.0.0 // 2014-02-12
+- initial release
+
 #### v0.0.3 // 2014-02-10
 - restructure directories and files
 - add gulpfile.js, package.json, and .gitignore

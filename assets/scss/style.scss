@@ -125,25 +125,6 @@ p {
 	margin-bottom: #{$baseline * 1.25}em;
 }
 
-pre {
-	display: block;
-	margin-bottom: #{$baseline * 2}em;
-}
-
-code {
-	background: #eee;
-	color: $color-dark;
-	display: block;
-	font-size: 0.9em;
-	overflow: auto;
-	padding: #{$baseline * 1.5}em #{$baseline * 1.5}em;
-	-webkit-overflow-scrolling: touch;
-}
-
-code span {
-	color: $color-mid;
-}
-
 a {
 	border-bottom: 1px solid $color-light;
 	color: $color-dark;
@@ -237,8 +218,6 @@ Buttons
 
 .button {
 	background: $color-dark;
-	border-right: 1px solid #fff;
-	border-bottom: 1px solid #fff;
 	color: #fff;
 	display: block;
 	float: left;
@@ -247,11 +226,11 @@ Buttons
 	padding: #{$baseline}em #{$baseline * 0.75}em;
 	text-align: center;
 	transition: background $transition-duration;
-	width: 50%;
+	width: 49%;
 }
 
 .button:last-child {
-	border: none;
+	float: right;
 }
 
 .button:hover,
@@ -261,12 +240,46 @@ Buttons
 }
 
 @media (max-width: 30em) {
-	.button {
+	.button,
+	.button:last-child {
 		border: none;
 		float: none;
-		margin-bottom: 1px;
+		margin-bottom: #{$baseline * 0.5}em;
 		width: auto;
 	}
+}
+
+/*
+//////////////////////////////////////////////////
+Code
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/
+
+.code-wrap {
+	margin-bottom: #{$baseline * 2}em;
+}
+
+pre {
+	display: block;
+	margin-bottom: #{$baseline * 0.75}em;
+}
+
+pre:last-child {
+	margin-bottom: 0;
+}
+
+code {
+	background: #eee;
+	color: $color-dark;
+	display: block;
+	font-size: 0.9em;
+	overflow: auto;
+	padding: #{$baseline * 1.25}em #{$baseline * 1.25}em;
+	-webkit-overflow-scrolling: touch;
+}
+
+code span {
+	color: $color-mid;
 }
 
 /*

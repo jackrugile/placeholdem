@@ -3,15 +3,13 @@ function Placeholdem( elems ) {
 
 	(function(){var lastTime=0;var vendors=['ms','moz','webkit','o'];for(var x=0;x<vendors.length&&!window.requestAnimationFrame;++x){window.requestAnimationFrame=window[vendors[x]+'RequestAnimationFrame'];window.cancelAnimationFrame=window[vendors[x]+'CancelAnimationFrame']||window[vendors[x]+'CancelRequestAnimationFrame'];}if(!window.requestAnimationFrame)window.requestAnimationFrame=function(callback,element){var currTime=new Date().getTime();var timeToCall=Math.max(0,16-(currTime-lastTime));var id=window.setTimeout(function(){callback(currTime+timeToCall);},timeToCall);lastTime=currTime+timeToCall;return id;};if(!window.cancelAnimationFrame)window.cancelAnimationFrame=function(id){clearTimeout(id);};}());
 
-	var P = this;
+	var P = {};
 
 	P.init = function() {
 		P.elems = [];
-		P.elemsLength = elems.length;
-		P.i = 0;
-		if( P.elemsLength ) {
-			for( ; P.i < P.elemsLength; P.i++ ) {
-				P.elems.push( new P.PlaceholdemElem( elems[ P.i ] ) );
+		if( elems.length ) {
+			for( var i = 0 ; i < elems.length; i++ ) {
+				P.elems.push( new P.PlaceholdemElem( elems[ i ] ) );
 			}
 		} else {
 			P.elems.push( new P.PlaceholdemElem( elems ) );
@@ -46,7 +44,7 @@ function Placeholdem( elems ) {
 		};
 
 		PE.onFocus = function() {
-			if( PE.elem.value === PE.placeholder || PE.animating ) {
+			if( PE.animating || PE.elem.value === PE.placeholder ) {
 				PE.animating = 1;
 				window.cancelAnimationFrame( PE.rAF );
 				PE.deletePlaceholder();
@@ -54,7 +52,7 @@ function Placeholdem( elems ) {
 		};
 
 		PE.onBlur = function() {
-			if( PE.elem.value === '' || PE.animating ) {
+			if( PE.animating || PE.elem.value === '' ) {
 				PE.animating = 1;
 				window.cancelAnimationFrame( PE.rAF );
 				PE.restorePlaceholder();
@@ -91,4 +89,6 @@ function Placeholdem( elems ) {
 	};
 
 	P.init();
-};
+
+	return P;
+}
