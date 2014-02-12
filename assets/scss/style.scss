@@ -48,13 +48,6 @@ body {
 	padding: #{$baseline * 2}em;
 }
 
-hr {
-	background: $color-dark;
-	border: none; 
-	height: 3px;
-	margin-bottom: #{$baseline * 2}em;
-}
-
 ::-moz-selection {
 	background: $color-dark !important;
 	color: #fff !important;
@@ -94,7 +87,7 @@ hr {
 	}
 
 	.container {
-		padding: #{$baseline}em
+		padding: #{$baseline}em;
 	}
 }
 
@@ -134,7 +127,7 @@ p {
 
 pre {
 	display: block;
-	margin-bottom: #{$baseline * 1.5}em;
+	margin-bottom: #{$baseline * 2}em;
 }
 
 code {
@@ -143,7 +136,8 @@ code {
 	display: block;
 	font-size: 0.9em;
 	overflow: auto;
-	padding: #{$baseline}em #{$baseline * 1.5}em;
+	padding: #{$baseline}em #{$baseline}em;
+	-webkit-overflow-scrolling: touch;
 }
 
 code span {
@@ -151,7 +145,7 @@ code span {
 }
 
 a {
-	border-bottom: 2px solid $color-light;
+	border-bottom: 1px solid $color-light;
 	color: $color-dark;
 	text-decoration: none;
 	transition: color $transition-duration;
@@ -250,7 +244,8 @@ Buttons
 	float: left;
 	font-size: 1em;
 	font-weight: 600;
-	padding: #{$baseline}em;
+	padding: #{$baseline}em #{$baseline * 0.75}em;
+	text-align: center;
 	transition: background $transition-duration;
 	width: 50%;
 }
@@ -282,7 +277,7 @@ Footer
 
 footer {
 	border-top: 2px solid $color-light;
-	padding-top: #{$baseline}em;
+	padding-top: #{$baseline * 1.5}em;
 }
 
 footer p {
@@ -306,7 +301,6 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
 	background: $color-dark;
-	transition: background $transition-duration;
 }
 
 body::-webkit-scrollbar-thumb:hover {

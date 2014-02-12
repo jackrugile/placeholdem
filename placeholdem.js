@@ -18,17 +18,6 @@ function Placeholdem( elems ) {
 		}
 	};
 
-	P.destroy = function() {
-		P.elemsLength = P.elems.length;
-		P.i = 0;
-		if( P.elemsLength ) {
-			for( ; P.i < P.elemsLength; P.i++ ) {
-				P.elems[ P.i ].destroy();
-			}
-			P.elems.length = 0;
-		}
-	};
-
 	P.PlaceholdemElem = function( elem ) {
 		var PE = this;
 
@@ -53,14 +42,6 @@ function Placeholdem( elems ) {
 				elem.addEventListener( eventType, handler );
 			} else {
 				elem.attachEvent( 'on' + eventType, handler );
-			}
-		};
-
-		PE.off = function( elem, eventType, handler ) {
-			if( elem.removeEventListener ) {
-				elem.removeEventListener( eventType, handler );
-			} else {
-				elem.detachEvent( 'on' + eventType, handler );
 			}
 		};
 
@@ -106,14 +87,8 @@ function Placeholdem( elems ) {
 			}
 		};
 
-		PE.destroy = function() {
-			PE.elem.setAttribute( 'placeholder', PE.placeholder );
-			PE.off( PE.elem, 'focus', PE.onFocus );
-			PE.off( PE.elem, 'blur', PE.onBlur);
-		};
-
 		PE.init();
 	};
 
 	P.init();
-}
+};
