@@ -10,7 +10,7 @@
 Placeholdem is a JavaScript plugin that animates placeholder carets on inputs and textareas. The placeholder value will incrementally delete on focus, and restore on blur.
 
 ```html
-// Input or Textarea
+<!-- Input or Textarea -->
 <input name="fieldname" placeholder="Placeholder Value" />
 ```
 
