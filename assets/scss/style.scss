@@ -136,7 +136,7 @@ code {
 	display: block;
 	font-size: 0.9em;
 	overflow: auto;
-	padding: #{$baseline}em #{$baseline}em;
+	padding: #{$baseline * 1.5}em #{$baseline * 1.5}em;
 	-webkit-overflow-scrolling: touch;
 }
 
