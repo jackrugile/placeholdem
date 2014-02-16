@@ -10,7 +10,7 @@
   "homepage": "http://placeholdem.jackrugile.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jackrugile/placeholdem"
+    "url": "git://github.com/jackrugile/placeholdem.git"
   },
   "license": "MIT",
   "devDependencies": {
