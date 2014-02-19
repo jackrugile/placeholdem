@@ -5,6 +5,7 @@
   "main": "placeholdem.js",
   "license": "MIT",
   "ignore": [
+    ".*",
     "assets/",
     "*.md",
     "*.html",
