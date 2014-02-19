@@ -2,8 +2,8 @@
 
 #### Placeholder Caret Animation
 
-- **Version:** v1.0.0
-- **Date:** 2014-02-12
+- **Version:** v1.0.1
+- **Date:** 2014-02-18
 
 #### [View Demo](http://placeholdem.jackrugile.com)
 

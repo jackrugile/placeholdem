@@ -7,13 +7,21 @@ function Placeholdem( elems ) {
 
 	P.init = function() {
 		P.elems = [];
-		if( elems.length ) {
+		if( elems && elems.length ) {
 			for( var i = 0 ; i < elems.length; i++ ) {
-				P.elems.push( new P.PlaceholdemElem( elems[ i ] ) );
+				if( P.hasPlaceholder( elems[ i ] ) ) {
+					P.elems.push( new P.PlaceholdemElem( elems[ i ] ) );
+				}
 			}
-		} else {
-			P.elems.push( new P.PlaceholdemElem( elems ) );
+		} else if( elems ) {
+			if( P.hasPlaceholder( elems ) ) {
+				P.elems.push( new P.PlaceholdemElem( elems ) );
+			}
 		}
+	};
+
+	P.hasPlaceholder = function( elem ) {
+		return ( typeof elem.hasAttribute === 'function' && elem.hasAttribute( 'placeholder' ) );
 	};
 
 	P.PlaceholdemElem = function( elem ) {

@@ -1,5 +1,8 @@
 # Changelog
 
+#### v1.0.1 // 2014-02-18
+- add check to handle arguments that are not elements with placeholder values
+
 #### v1.0.0 // 2014-02-12
 - initial release
 
