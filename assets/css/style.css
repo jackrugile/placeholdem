@@ -116,20 +116,26 @@ body {
 }
 
 /* line 51, style.scss */
+header {
+  float: left;
+  width: 60%;
+}
+
+/* line 56, style.scss */
 ::-moz-selection {
   background: #333333 !important;
   color: #fff !important;
   text-shadow: none !important;
 }
 
-/* line 57, style.scss */
+/* line 62, style.scss */
 ::selection {
   background: #333333 !important;
   color: #fff !important;
   text-shadow: none !important;
 }
 
-/* line 63, style.scss */
+/* line 68, style.scss */
 .fade {
   opacity: 0;
   position: relative;
@@ -138,30 +144,36 @@ body {
   transition: opacity 600ms, top 600ms;
 }
 
-/* line 73, style.scss */
+/* line 78, style.scss */
 .fade-load {
   opacity: 1;
   top: 0;
 }
 
 @media (max-width: 50em) {
-  /* line 79, style.scss */
+  /* line 84, style.scss */
   body {
     font-size: 100%;
   }
+
+  /* line 88, style.scss */
+  header {
+    float: none;
+    width: auto;
+  }
 }
 @media (max-width: 30em) {
-  /* line 85, style.scss */
+  /* line 95, style.scss */
   body {
     font-size: 90%;
   }
 
-  /* line 89, style.scss */
+  /* line 99, style.scss */
   .container {
     padding: 1.5em;
   }
 }
-/* line 100, style.scss */
+/* line 110, style.scss */
 h1 {
   font-size: 3em;
   font-weight: 600;
@@ -170,7 +182,7 @@ h1 {
   margin-bottom: 0.1em;
 }
 
-/* line 108, style.scss */
+/* line 118, style.scss */
 h2 {
   color: #333333;
   font-size: 1.3em;
@@ -179,21 +191,22 @@ h2 {
   margin-bottom: 1.125em;
 }
 
-/* line 116, style.scss */
+/* line 126, style.scss */
 h3 {
+  clear: both;
   font-size: 1.3em;
   font-weight: 400;
   line-height: 1;
   margin-bottom: 0.75em;
 }
 
-/* line 123, style.scss */
+/* line 134, style.scss */
 p {
   font-size: 0.9em;
   margin-bottom: 1.875em;
 }
 
-/* line 128, style.scss */
+/* line 139, style.scss */
 a {
   border-bottom: 1px solid #dddddd;
   color: #333333;
@@ -202,24 +215,24 @@ a {
   transition: color 300ms;
 }
 
-/* line 136, style.scss */
+/* line 147, style.scss */
 a:hover,
 a:focus {
   color: #999999;
 }
 
-/* line 146, style.scss */
+/* line 157, style.scss */
 form {
   margin-bottom: 2.25em;
 }
 
-/* line 150, style.scss */
+/* line 161, style.scss */
 label {
   display: block;
   position: relative;
 }
 
-/* line 156, style.scss */
+/* line 167, style.scss */
 textarea,
 input {
   border: 2px solid #dddddd;
@@ -234,7 +247,7 @@ input {
   transition: border-color 300ms, color 300ms;
   -webkit-appearance: none;
 }
-/* line 170, style.scss */
+/* line 181, style.scss */
 textarea:focus,
 input:focus {
   border-color: #333333;
@@ -242,7 +255,7 @@ input:focus {
   outline: none;
 }
 
-/* line 177, style.scss */
+/* line 188, style.scss */
 textarea {
   margin: 0;
   min-height: 7.5em;
@@ -251,7 +264,7 @@ textarea {
   resize: vertical;
 }
 
-/* line 185, style.scss */
+/* line 196, style.scss */
 .arrow {
   border-top: 9px solid #dddddd;
   border-right: 9px solid #dddddd;
@@ -265,7 +278,7 @@ textarea {
   transition: border-color 300ms;
 }
 
-/* line 198, style.scss */
+/* line 209, style.scss */
 input:focus + .arrow,
 textarea:focus + .arrow {
   border-top-color: #333333;
@@ -273,18 +286,18 @@ textarea:focus + .arrow {
 }
 
 @media (max-width: 30em) {
-  /* line 205, style.scss */
+  /* line 216, style.scss */
   textarea,
   input {
     font-size: 1.3em;
   }
 }
-/* line 215, style.scss */
+/* line 226, style.scss */
 .buttons {
   margin-bottom: 2.25em;
 }
 
-/* line 219, style.scss */
+/* line 230, style.scss */
 .button {
   background: #333333;
   color: #fff;
@@ -299,12 +312,12 @@ textarea:focus + .arrow {
   width: 49%;
 }
 
-/* line 232, style.scss */
+/* line 243, style.scss */
 .button:last-child {
   float: right;
 }
 
-/* line 237, style.scss */
+/* line 248, style.scss */
 .button:hover,
 .button:focus {
   background: #999999;
@@ -312,7 +325,7 @@ textarea:focus + .arrow {
 }
 
 @media (max-width: 30em) {
-  /* line 244, style.scss */
+  /* line 255, style.scss */
   .button,
   .button:last-child {
     border: none;
@@ -321,23 +334,23 @@ textarea:focus + .arrow {
     width: auto;
   }
 }
-/* line 258, style.scss */
+/* line 269, style.scss */
 .code-wrap {
   margin-bottom: 3em;
 }
 
-/* line 262, style.scss */
+/* line 273, style.scss */
 pre {
   display: block;
   margin-bottom: 1.125em;
 }
 
-/* line 267, style.scss */
+/* line 278, style.scss */
 pre:last-child {
   margin-bottom: 0;
 }
 
-/* line 271, style.scss */
+/* line 282, style.scss */
 code {
   background: #eee;
   color: #333333;
@@ -348,56 +361,78 @@ code {
   -webkit-overflow-scrolling: touch;
 }
 
-/* line 281, style.scss */
+/* line 292, style.scss */
 code span {
   color: #999999;
 }
 
-/* line 291, style.scss */
+/* line 302, style.scss */
 footer {
   border-top: 2px solid #dddddd;
   padding-top: 2.25em;
 }
 
-/* line 296, style.scss */
+/* line 307, style.scss */
 footer p {
   font-size: 0.8em;
   margin-bottom: 0;
 }
 
-/* line 307, style.scss */
+/* line 318, style.scss */
 body::-webkit-scrollbar {
   width: 15px;
 }
 
-/* line 311, style.scss */
+/* line 322, style.scss */
 body::-webkit-scrollbar-track {
   background: #dddddd;
 }
 
-/* line 315, style.scss */
+/* line 326, style.scss */
 body::-webkit-scrollbar-thumb {
   background: #333333;
 }
 
-/* line 319, style.scss */
+/* line 330, style.scss */
 body::-webkit-scrollbar-thumb:hover {
   background: #999999;
 }
 
-/* line 330, style.scss */
+/* line 341, style.scss */
 .clearfix:before,
 .clearfix:after {
   content: '';
   display: table;
 }
 
-/* line 335, style.scss */
+/* line 346, style.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 339, style.scss */
+/* line 350, style.scss */
 .clearfix {
   zoom: 1;
+}
+
+/* line 360, style.scss */
+body .one .bsa_it_ad {
+  background: #fff;
+  border: 2px solid #dddddd;
+  float: right;
+  margin-bottom: 1.125em;
+  width: 35%;
+}
+
+/* line 368, style.scss */
+body .one .bsa_it_t {
+  clear: both;
+}
+
+@media (max-width: 50em) {
+  /* line 373, style.scss */
+  body .one .bsa_it_ad {
+    float: none;
+    width: auto;
+  }
 }

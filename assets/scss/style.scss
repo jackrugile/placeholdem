@@ -48,6 +48,11 @@ body {
 	padding: #{$baseline * 2}em;
 }
 
+header {
+	float: left;
+	width: 60%;
+}
+
 ::-moz-selection {
 	background: $color-dark !important;
 	color: #fff !important;
@@ -78,6 +83,11 @@ body {
 @media (max-width: 50em) {
 	body {
 		font-size: 100%;
+	}
+
+	header {
+		float: none;
+		width: auto;
 	}
 }
 
@@ -114,6 +124,7 @@ h2 {
 }
 
 h3 {
+	clear: both;
 	font-size: 1.3em;
 	font-weight: 400;
 	line-height: 1;
@@ -338,4 +349,29 @@ Miscellaneous
 
 .clearfix {
 	zoom: 1;
+}
+
+/*
+//////////////////////////////////////////////////
+BSA Ads
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/
+
+body .one .bsa_it_ad {
+	background: #fff;
+	border: 2px solid $color-light;
+	float: right;
+	margin-bottom: #{$baseline * 0.75}em;
+	width: 35%;
+}
+
+body .one .bsa_it_t {
+	clear: both;
+}
+
+@media (max-width: 50em) {
+	body .one .bsa_it_ad {
+		float: none;
+		width: auto;
+	}
 }

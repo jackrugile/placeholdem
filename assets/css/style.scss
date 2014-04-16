@@ -303,3 +303,61 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
 	background: $color-mid;
 }
+
+/*
+//////////////////////////////////////////////////
+BSA Ads
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/
+
+body .one .bsa_it_ad {
+	background: #f5f5f5;
+	border: 1px solid #ddd;
+	padding: 15px; 
+	margin: 15px 0 0 0;
+	text-align: center;
+}
+	
+body .one .bsa_it_ad .bsa_it_i { 
+	display: block; 
+	padding: 0;
+	float: none;
+	margin: 0 0 5px; 
+}
+
+body .one .bsa_it_ad .bsa_it_i img { 
+	padding: 0; 
+	border: none;
+}
+
+body .one .bsa_it_ad .bsa_it_t { 
+	padding: 6px 0; 
+	color: #444;
+	font-size: 15px;
+	text-shadow: 0 1px 0 #0ff;
+}
+
+body .one .bsa_it_ad .bsa_it_d { 
+	color: #777; 
+	font-size: 12px;
+	font-weight: normal;
+	padding: 0;
+	text-shadow: 0 1px 0 #fff;
+}
+
+body .one .bsa_it_p {
+	display: none;
+	top: 10px;
+}
+
+body .one .bsa_it_p a {
+	color: #bbb;
+	text-shadow: 0 1px 0 #fff;
+}
+
+body #bsap_aplink,
+body #bsap_aplink:hover {
+	display: block;
+	font-size: 10px;
+	margin: 12px 15px 0;
+}
