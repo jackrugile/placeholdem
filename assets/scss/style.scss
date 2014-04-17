@@ -369,6 +369,10 @@ body .one .bsa_it_t {
 	clear: both;
 }
 
+body .one .bsa_it_p {
+	display: none !important;
+}
+
 @media (max-width: 50em) {
 	body .one .bsa_it_ad {
 		float: none;

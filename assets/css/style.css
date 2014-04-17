@@ -429,8 +429,13 @@ body .one .bsa_it_t {
   clear: both;
 }
 
+/* line 372, style.scss */
+body .one .bsa_it_p {
+  display: none !important;
+}
+
 @media (max-width: 50em) {
-  /* line 373, style.scss */
+  /* line 377, style.scss */
   body .one .bsa_it_ad {
     float: none;
     width: auto;
