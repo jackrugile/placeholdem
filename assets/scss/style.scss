@@ -353,28 +353,44 @@ Miscellaneous
 
 /*
 //////////////////////////////////////////////////
-BSA Ads
+Carbon Ads
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 */
 
-body .one .bsa_it_ad {
+#carbonads {
 	background: #fff;
 	border: 2px solid $color-light;
 	float: right;
 	margin-bottom: #{$baseline * 0.75}em;
+	padding: 15px;
 	width: 35%;
 }
 
-body .one .bsa_it_t {
-	clear: both;
+.carbon-img {
+	border: none;
+	display: block;
+	margin-bottom: #{$baseline * 0.5}em;
+	width: 130px;
+	img {
+		display: block;
+	}
 }
 
-body .one .bsa_it_p {
-	display: none !important;
+.carbon-text {
+	border: none;
+	display: block;
+	font-size: 0.75em;
+	margin-bottom: #{$baseline * 0.5}em;
+}
+
+.carbon-poweredby {
+	border: none;
+	color: #999;
+	font-size: 0.75em;
 }
 
 @media (max-width: 50em) {
-	body .one .bsa_it_ad {
+	#carbonads {
 		float: none;
 		width: auto;
 	}

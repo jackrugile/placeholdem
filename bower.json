@@ -1,7 +1,7 @@
 {
   "name": "placeholdem",
   "description": "A JS plugin that animates placeholder carets on inputs and textareas. The value will incrementally delete on focus, and restore on blur.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "placeholdem.js",
   "license": "MIT",
   "ignore": [

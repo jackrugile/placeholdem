@@ -29,6 +29,7 @@ function Placeholdem( elems ) {
 
 		PE.init = function() {
 			PE.elem = elem;
+			PE.form = elem.form;
 			PE.placeholder = PE.elem.getAttribute( 'placeholder' );
 			PE.elem.removeAttribute( 'placeholder' );
 			PE.rAF = null;
@@ -41,6 +42,9 @@ function Placeholdem( elems ) {
 			PE.on( PE.elem, 'focus', PE.onFocus );
 			PE.on( PE.elem, 'blur', PE.onBlur);
 			PE.on( PE.elem, 'keydown', PE.onKeydown);
+			if( PE.form ) {
+				PE.on( PE.form, 'reset', PE.onReset);
+			}
 		};
 
 		PE.on = function( elem, eventType, handler ) {
@@ -73,6 +77,12 @@ function Placeholdem( elems ) {
 				window.cancelAnimationFrame( PE.rAF );
 				PE.elem.value = '';
 			}
+		};
+
+		PE.onReset = function() {
+			setTimeout( function() {
+				PE.onBlur();
+			});
 		};
 
 		PE.deletePlaceholder = function() {
