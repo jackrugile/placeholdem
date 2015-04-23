@@ -1,9 +1,19 @@
+/**
+ * Placeholdem - Placeholder Caret Animation
+ * v1.0.2 - MIT License
+ * http://placeholdem.jackrugile.com - git://github.com/jackrugile/placeholdem.git
+ * by Jack Rugile - @jackrugile
+ */
+
 function Placeholdem( elems ) {
 	"use strict";
 
 	(function(){var lastTime=0;var vendors=['ms','moz','webkit','o'];for(var x=0;x<vendors.length&&!window.requestAnimationFrame;++x){window.requestAnimationFrame=window[vendors[x]+'RequestAnimationFrame'];window.cancelAnimationFrame=window[vendors[x]+'CancelAnimationFrame']||window[vendors[x]+'CancelRequestAnimationFrame'];}if(!window.requestAnimationFrame)window.requestAnimationFrame=function(callback,element){var currTime=new Date().getTime();var timeToCall=Math.max(0,16-(currTime-lastTime));var id=window.setTimeout(function(){callback(currTime+timeToCall);},timeToCall);lastTime=currTime+timeToCall;return id;};if(!window.cancelAnimationFrame)window.cancelAnimationFrame=function(id){clearTimeout(id);};}());
 
 	var P = {};
+
+	P.customElems = ['password'];
+	P.defaultInputAttributeName = 'data-defaultinputtype';
 
 	P.init = function() {
 		P.elems = [];
@@ -34,6 +44,10 @@ function Placeholdem( elems ) {
 			PE.elem.removeAttribute( 'placeholder' );
 			PE.rAF = null;
 			PE.animating = 0;
+			PE.defaultInputType = PE.elem.getAttribute('type');
+
+			
+			PE.resetDefaultType();
 
 			if( !PE.elem.value ) {
 				PE.elem.value = PE.placeholder;
@@ -60,6 +74,7 @@ function Placeholdem( elems ) {
 				PE.animating = 1;
 				window.cancelAnimationFrame( PE.rAF );
 				PE.deletePlaceholder();
+				PE.restoreDefaultType();
 			}
 		};
 
@@ -68,6 +83,7 @@ function Placeholdem( elems ) {
 				PE.animating = 1;
 				window.cancelAnimationFrame( PE.rAF );
 				PE.restorePlaceholder();
+				PE.resetDefaultType();
 			}
 		};
 
@@ -102,6 +118,20 @@ function Placeholdem( elems ) {
 				PE.animating = 0;
 			}
 		};
+
+		PE.restoreDefaultType = function(){
+			var defaultType = PE.elem.getAttribute(P.defaultInputAttributeName);
+			if(defaultType && P.customElems.indexOf(defaultType) != -1 && defaultType != PE.elem.getAttribute('type')){
+				PE.elem.setAttribute('type', defaultType);
+			}
+		};
+
+		PE.resetDefaultType = function(){
+			if(P.customElems.indexOf(PE.defaultInputType) != -1){
+			    PE.elem.setAttribute(P.defaultInputAttributeName, PE.defaultInputType);
+				PE.elem.setAttribute('type', 'text');
+			}
+		};	
 
 		PE.init();
 	};
