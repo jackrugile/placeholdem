@@ -1,5 +1,13 @@
 # Placeholdem
 
+[![Project Status: Inactive - The project has reached a stable, usable state but is no longer being actively developed; support/maintenance will be provided as time allows.](http://www.repostatus.org/badges/latest/inactive.svg)](http://www.repostatus.org/#inactive)
+
+#### 2016-11-04 Update
+
+This project is no longer being developed or maintained. The effect this plugin gives is visually appealing, but it's a bad practice in terms of usability and accessibility. On top of that, manipulating the values of different HTML5 input types directly has a lot of issues (text, email, number, search, etc.). I suggest using an alternative styling for labels and placeholders, such as [Floating Labels](https://css-tricks.com/float-labels-css/).
+
+-----
+
 #### Placeholder Caret Animation
 
 - **Version:** v1.0.2
