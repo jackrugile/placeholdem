@@ -1,7 +1,7 @@
 /**
  * Placeholdem - Placeholder Caret Animation
  * v1.0.2 - MIT License
- * http://placeholdem.jackrugile.com - git://github.com/jackrugile/placeholdem.git
+ * https://placeholdem.jackrugile.com - git://github.com/jackrugile/placeholdem.git
  * by Jack Rugile - @jackrugile
  */
 
@@ -128,10 +128,10 @@ function Placeholdem( elems ) {
 
 		PE.resetDefaultType = function(){
 			if(P.customElems.indexOf(PE.defaultInputType) != -1){
-			    PE.elem.setAttribute(P.defaultInputAttributeName, PE.defaultInputType);
+				PE.elem.setAttribute(P.defaultInputAttributeName, PE.defaultInputType);
 				PE.elem.setAttribute('type', 'text');
 			}
-		};	
+		};
 
 		PE.init();
 	};

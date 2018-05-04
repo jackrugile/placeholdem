@@ -1,6 +1,6 @@
 # Placeholdem
 
-[![Project Status: Inactive - The project has reached a stable, usable state but is no longer being actively developed; support/maintenance will be provided as time allows.](http://www.repostatus.org/badges/latest/inactive.svg)](http://www.repostatus.org/#inactive)
+[![Project Status: Inactive - The project has reached a stable, usable state but is no longer being actively developed; support/maintenance will be provided as time allows.](https://www.repostatus.org/badges/latest/inactive.svg)](https://www.repostatus.org/#inactive)
 
 #### 2016-11-04 Update
 
@@ -13,7 +13,7 @@ This project is no longer being developed or maintained. The effect this plugin 
 - **Version:** v1.0.2
 - **Date:** 2015-02-08
 
-#### [View Demo](http://placeholdem.jackrugile.com)
+#### [View Demo](https://placeholdem.jackrugile.com)
 
 Placeholdem is a JavaScript plugin that animates placeholder carets on inputs and textareas. The placeholder value will incrementally delete on focus, and restore on blur.
 
